@@ -1,0 +1,62 @@
+/* Reset Styling */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Arial', sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; }
+
+/* Header */
+header { background: #40cf98; color: white; padding: 20px; text-align: center; }
+header img { width: 100px; border-radius: 0%; }
+header h1 { font-size: 36px; }
+
+/* Navbar */
+nav { background: #333; padding: 10px 0; }
+nav ul { display: flex; justify-content: center; gap: 20px; list-style: none; }
+nav a { color: white; text-decoration: none; padding: 10px 15px; font-weight: bold; position: relative; transition: background-color 0.3s, opacity 0.3s; }
+nav a:hover { background: transparent; opacity: 0.7; } /* Hanya memudar tanpa kotak */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 0;
+  height: 3px;
+  background: #40cf98;  /* Ganti dengan warna yang sesuai */
+  transition: width 0.3s ease-out;
+}
+nav a:hover::after {
+  width: 100%; /* Garis bawah muncul saat hover */
+}
+
+/* Home Section */
+#home { padding: 50px 20px; background: #e2f9e2; text-align: center; }
+#home h2 { font-size: 32px; }
+#home img { width: 80%; border-radius: 8px; margin-top: 20px;  width: 100%; height: 200px; object-fit: cover;}
+.info-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 20px; cursor: pointer; transition: transform 0.3s ease; }
+.info-card:hover { transform: scale(1.05); }
+
+/* Content Section */
+#content { padding: 50px 20px; background: #f4f4f4; text-align: center; }
+#content img { width: 80%; border-radius: 8px; margin-top: 20px;  width: 100%; height: 200px; object-fit: cover;}
+#order-form { margin-top: 30px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 500px; margin-left: auto; margin-right: auto; }
+#order-form input, #order-form select { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; }
+#order-form input[type="submit"] { background: #40cf98; color: white; border: none; cursor: pointer; }
+#order-form input[type="submit"]:hover { background: #20b37a; }
+
+/* About Section */
+#about { padding: 50px 20px; background: #dce7dc; text-align: center; }
+#about a { color: #40cf98; font-weight: bold; text-decoration: none; position: relative; transition: opacity 0.3s ease; }
+#about a:hover { opacity: 0.7; } /* Memudar tanpa kotak */
+#about a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; left: 0;
+  width: 0;
+  height: 3px;
+  background: #40cf98;  /* Ganti dengan warna yang sesuai */
+  transition: width 0.3s ease-out;
+}
+#about a:hover::after { width: 100%; }
+
+/* Footer */
+footer { background: #333; color: white; text-align: center; padding: 5px; position: fixed; bottom: 0; width: 100%; }
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
